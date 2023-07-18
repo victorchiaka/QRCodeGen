@@ -1,0 +1,20 @@
+@keyframes roll {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    50% {
+        transform: translateX(200px) rotate(360deg);
+    }
+    100% {
+        transform: translateX(0) rotate(720deg);
+    }
+}
+
+.rotate-move {
+    animation: roll 3s infinite;
+}
+
+a {
+    text-decoration: none;
+}
+
