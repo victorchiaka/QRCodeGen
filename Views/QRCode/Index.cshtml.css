@@ -1,4 +1,36 @@
 .box {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    align-content: center; */
+}
+
+.img-fluid {
+    max-width: 300px;
+}
+
+.text-input {
+    height: 1.2em;
+    /*width: 100%;*/
+    padding: 5px;
+    background: transparent;
+}
+
+/*.text-input:active {*/
+/*    outline: none;*/
+/*    border-bottom: 2px solid black;*/
+/*}*/
+
+.no-border-top-right-left {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+
+.no-outline {
+    outline: 0;
+}
+
+.rounded-extra {
+    border-radius: 15px;
 }
