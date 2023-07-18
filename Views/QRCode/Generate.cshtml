@@ -1,0 +1,22 @@
+@* @model TModel *@
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+@* <h2>title</h2> *@
+
+<div class="text-center">
+    @{
+        if (ViewBag.QRCodeImage != null)
+        {
+            <div class="alert alert-success">QR Code successfully created</div>
+            <img class="img-fluid" src="@ViewBag.QRCodeImage" alt="qr code"/>
+        }
+        else
+        {
+            <div class="alert alert-danger">Something went wrong</div>
+        }
+    }
+</div> 

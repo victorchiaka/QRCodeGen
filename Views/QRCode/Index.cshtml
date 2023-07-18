@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Index.cshtml.css">
+        @{
+            ViewBag.title = "QR code - Generator";
+            ViewBag.layout = "_Layout";
+        }
+    @*<title>Document</title>*@
+</head>
+<body>
+    <h1 class="display-5 text-center">QR Code Generator</h1>
+    
+    @* <div class="text-center box"> *@
+        <form asp-action="Generate" method="post">
+            <input type="text" required name="payload" placeholder="Enter the text to encode">
+            <div class="text-center">
+                @{
+                    if (ViewBag.QRCodeImage != null)
+                    {
+                        @* <div class="alert alert-success">QR Code successfully created</div> *@
+                        <img class="img-fluid" src="@ViewBag.QRCodeImage" alt="qr code"/>
+                    }
+                    else
+                    {
+                        @* <div class="alert alert-danger">Something went wrong</div> *@
+                    }
+                }
+            </div> 
+            <input class="btn btn-primary" type="submit" value="Generate">
+        </form>
+@* </div> *@
+
+</body>
+</html>
