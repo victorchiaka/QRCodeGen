@@ -15,11 +15,6 @@
     background: transparent;
 }
 
-/*.text-input:active {*/
-/*    outline: none;*/
-/*    border-bottom: 2px solid black;*/
-/*}*/
-
 .no-border-top-right-left {
     border-top: none;
     border-left: none;
