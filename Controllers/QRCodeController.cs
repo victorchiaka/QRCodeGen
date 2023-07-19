@@ -44,8 +44,6 @@ public class QRCodeController : Controller
                 ViewBag.QRCodeImage = "data:image/png;base64," + Convert.ToBase64String(stream.ToArray());
             }
         }
-
-        // return View();
         return View("Index");
     }
 }
