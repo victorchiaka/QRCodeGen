@@ -1,36 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Index.cshtml.css">
-        @{
-            ViewBag.title = "QR code - Generator";
-            ViewBag.layout = "_Layout";
-        }
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Index.cshtml.css" />
+    @{ ViewBag.title = "QR code - Generator"; ViewBag.layout = "_Layout"; }
+  </head>
+  <body>
     <h1 class="display-3 text-center mt-5">QR Code Generator</h1>
-    
-    <div class="text-center box">
-        <form asp-action="Generate" method="post" class="mt-3">
-            <input type="text" required name="payload" class="p-3 pt-4 no-border-top-right-left no-outline text-input" placeholder="Enter the text to encode">
-            <div class="text-center">
-                @{
-                    if (ViewBag.QRCodeImage != null)
-                    {
-                        <img class="img-fluid" src="@ViewBag.QRCodeImage" alt="qr code"/>
-                    }
-                    else
-                    {
-                        <img class="img-fluid align-self-center" src="~/QRCode.svg" alt="qr code"/>
-                    }
-                }
-            </div> 
-            <input class="btn btn-primary rounded-extra" type="submit" value="Generate">
-        </form>
-</div>
 
-</body>
+    <div class="text-center box">
+      <form asp-action="Generate" method="post" class="mt-3">
+        <input
+          type="text"
+          required
+          name="payload"
+          class="p-3 pt-4 no-border-top-right-left no-outline text-input"
+          placeholder="Enter the text to encode" />
+        <div class="text-center">
+          @{
+            if (ViewBag.QRCodeImage != null)
+          {
+            <img class="img-fluid" src="@ViewBag.QRCodeImage" alt="qr code" />
+          }
+            else
+          {
+            <img
+              class="img-fluid align-self-center"
+              src="~/QRCode.svg"
+              alt="qr code" />
+          }
+        }
+        </div>
+        <input
+          class="btn btn-primary rounded-extra"
+          type="submit"
+          value="Generate" />
+      </form>
+    </div>
+  </body>
 </html>
