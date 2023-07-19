@@ -1,16 +1,9 @@
-.box {
-    /* display: flex;
-    flex-direction: column;
-    align-content: center; */
-}
-
 .img-fluid {
     max-width: 300px;
 }
 
 .text-input {
     height: 1.2em;
-    /*width: 100%;*/
     padding: 5px;
     background: transparent;
 }
