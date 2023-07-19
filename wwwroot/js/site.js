@@ -1,10 +1,10 @@
 ﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
 var body = document.querySelector("body");
-body.style.backgroundImage =
-    'url("/images/one-person-standing-determined-extreme-adventure-generated-by-ai.jpg")';
+
+// body.style.backgroundImage = 'url("/images/one-person-standing-determined-extreme-adventure-generated-by-ai.jpg")';
+
 body.style.transition = "2s ease-in-out";
 
 function changeBackground() {
